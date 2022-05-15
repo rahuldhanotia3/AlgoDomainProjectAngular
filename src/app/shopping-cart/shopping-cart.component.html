@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+      
+      
+      .d{width: 600px;height: 500px;margin-left: 350px;margin-top: 50px;}
+      .loginhead{font-size: 50px;font-family: 'Times New Roman', Times, serif;font-weight: 500;margin-left: 150px;}
+      
+  </style>
+</head>
+<body>
+  
+  <nav class="nvhead navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" routerLink="#">Shopping</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item"> 
+        </li>
+    </ul>
+    </div>
+
+    <img (click)="clickOnCart()" src="assets/productimg/shopping-cart.png" class="cartlogo"><label class="labelforcart">{{totalItem}}</label>
+  </nav>
+
+  <table>
+    <tr *ngFor="let c of currentCart">
+        <td><img src="assets/productimg/{{c.productname}}.jpg" alt=""></td>
+        <td><h5><b>{{c.productname}}</b></h5></td>
+        <td><h5><b><button class="plus" (click)="plusClick(c.id)">+</button><label style="padding: 5px;">{{c.quantity}}</label><button class="minus" (click)="minusClick(c.id)">-</button></b></h5></td>
+        <td><h5><b>{{c.productprice}}</b></h5></td>
+        <td><h5><b>{{c.productprice * c.quantity}}</b></h5></td>
+    </tr>
+    
+</table>
+<button (click)="proceed()" class="btn btn-primary btn-block">Proceed</button>
+<!-- navbar navbar-expand-sm bg-dark navbar-dark -->
+<!-- <nav class="navbar navbar-expand-md bg-dark fixed-bottom navbar-dark">
+    <p class="btn footertext btn-block">Copyrights@Shopping | All Rights Reserved.</p>
+</nav> -->
+</body>
+</html>

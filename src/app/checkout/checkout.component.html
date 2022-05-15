@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+      
+      .btn{height: 40px;}
+      .d{width: 600px;height: 500px;margin-left: 350px;margin-top: 50px;}
+      .loginhead{font-size: 50px;font-family: 'Times New Roman', Times, serif;font-weight: 500;margin-left: 150px;}
+      
+  </style>
+</head>
+<body>
+  
+  <nav class="nvhead navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" routerLink="#">Shopping</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+        </li>
+    </ul>
+    </div>
+  </nav>
+
+  <div class="billpage">
+    <p class="billp">Name : Rahul Dhanotia</p>
+    <p class="billp">Address : Gwalior</p>
+    <p class="billp">Pincode : 474001</p>
+    <p class="billp">Date :{{date}} : {{time}}</p>
+    <p class="billp">Total Price :{{grandTotal}}</p>
+    <p class="billp">Payment mode </p>
+  
+    <label><input [(ngModel)]="creditdebit" value="CreditCard/DebitCard" type="radio" name="paymentMode" id="radiobtn"> CreditCard/DebitCard</label>
+    <label><input [(ngModel)]="paytmwallet" value="Paytm / Wallet" type="radio" name="paymentMode" id="radiobtn"> Paytm / Wallet</label>
+    <label><input [(ngModel)]="upi" value="UPI Payment" type="radio" name="paymentMode" id="radiobtn"> UPI Payment</label><br>
+  
+    <button class="billbtn" (click)="submit()">Submit Order</button>
+  </div> 
+
+<!-- navbar navbar-expand-sm bg-dark navbar-dark -->
+<!-- <nav class="navbar navbar-expand-md bg-dark fixed-bottom navbar-dark">
+    <p class="btn footertext btn-block">Copyrights@Shopping | All Rights Reserved.</p>
+</nav> -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    }
+    .footertext{
+    color: lightgray;
+    /* background-color: #0A5B8A; */
+    }
+    .navbar{
+        height: 50px;
+    }
+    .nvhead{
+        height: 80px;
+    }
+    .billpage{
+
+        width: 60%;
+        height: 550px;
+        text-align: center;
+        border: 1px solid black;
+        margin-left: 20%;
+        margin-top: 5%;
+        background-color: #f2f2f2;
+    }
+   
+    .billp{
+    
+        padding: 5px 5px 5px 5px;
+        color: black;
+        font-size: 20px;
+    }
+    .billbtn:hover{
+    
+        background-color: black;
+        color: white;
+    }
+    #toast-container > .toast-custom {
+        content: "\f00C";
+    }
+        
